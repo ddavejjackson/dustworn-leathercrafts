@@ -1,11 +1,17 @@
+/* import custom fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Nunito:ital,wght@1,300&display=swap");
+
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial;
+  font-family: "Nunito", sans-serif;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", sans-serif;
   line-height: 1.2;
 }
 

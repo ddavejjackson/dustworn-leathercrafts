@@ -1,4 +1,4 @@
-baseURL: "/"
+baseURL: "https://sample-work-proto.netlify.app/"
 languageCode: "en-us"
 title: "Dustworn Leatherworks"
 
@@ -12,9 +12,12 @@ params:
 
 menu:
   main:
-    - name: "Something"
-      url: "something/"
+    - name: "Shop"
+      url: "shop/"
       weight: 1
+    - name: "About"
+      url: about/
+      weight: 2
 
 outputs:
   home:
