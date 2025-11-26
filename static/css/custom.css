@@ -1,34 +1,97 @@
-/* import custom fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Nunito:ital,wght@1,300&display=swap");
 
+/* GLOBAL */
 body {
+  background-color: #000;
+  color: #d4af37; /* gold */
   font-family: "Nunito", sans-serif;
 }
 
+/* HEADINGS */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  color: #d4af37;
   font-family: "Lora", sans-serif;
-  line-height: 1.2;
 }
 
-.content img {
-  max-width: 100%;
-  height: auto;
+/* NAVBAR */
+.navbar {
+  background-color: #000 !important; /* black */
 }
 
-/* Make card text more legible on mobile */
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #d4af37 !important;
+  transition: color 0.25s ease;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover {
+  color: #b8860b !important; /* darker gold */
+}
+
+/* DROPDOWN MENU (dark + gold) */
+.dropdown-menu {
+  background-color: #000 !important;
+  border: 1px solid #d4af37;
+}
+
+.dropdown-item {
+  color: #d4af37 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #111 !important;
+  color: #b8860b !important;
+}
+
+/* LINKS ANYWHERE */
+a {
+  color: #d4af37;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #b8860b;
+}
+
+/* BUTTONS */
+.btn,
+.btn-primary,
+.btn-outline-primary {
+  color: #d4af37 !important;
+  border-color: #d4af37 !important;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-outline-primary:hover {
+  color: #000 !important;
+  background-color: #b8860b !important;
+  border-color: #b8860b !important;
+}
+
+/* CARDS */
 .card {
-  border-radius: 0.6rem;
+  background-color: #110f0f; /* dark charcoal */
+  border-color: #af9028 !important; /* softer gold */
 }
 
-/* Slight container padding on very small screens */
-@media (max-width: 576px) {
-  .container {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
+/* FOOTER */
+footer {
+  background-color: #000 !important;
+  color: #d4af37 !important;
+  padding: 1rem 0;
+}
+
+footer a {
+  color: #d4af37 !important;
+}
+
+footer a:hover {
+  color: #b8860b !important;
 }
