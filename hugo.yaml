@@ -1,0 +1,17 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "Dustworm Leatherworks"
+
+params:
+  brand: "Dustworm Leatherworks"
+
+  description: "Dustworm began with a single worm axe sheath - busted stitches, no machines, no plan. Just leather, thread and desire. I restitched it. Wore in. Never wore it out. It gathered story."
+
+  author:
+    name: "Dakota"
+
+menu:
+  main:
+    - name: "Something"
+      url: "something/"
+      weight: 1

@@ -1,0 +1,28 @@
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make card text more legible on mobile */
+.card {
+  border-radius: 0.6rem;
+}
+
+/* Slight container padding on very small screens */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
