@@ -1,0 +1,10 @@
+{{- $.Scratch.Add "pages" slice -}}
+{{- range .Site.RegularPages -}}
+  {{- $.Scratch.Add "pages" (dict
+    "title" .Title
+    "summary" .Summary
+    "content" (.Plain | truncate 2000)
+    "permalink" .Permalink
+  ) -}}
+{{- end -}}
+{{- $.Scratch.Get "pages" | jsonify -}}

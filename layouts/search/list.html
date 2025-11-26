@@ -1,0 +1,68 @@
+{{ define "main" }}
+<h1 class="h3 mb-4">Search</h1>
+
+<input
+  id="search-input"
+  class="form-control mb-3"
+  type="search"
+  placeholder="Type to search…"
+/>
+
+<div id="results"></div>
+
+<!-- Fuse.js -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+
+<script>
+  async function initSearch() {
+    const response = await fetch("{{ "index.json" | relURL }}");
+    const pages = await response.json();
+
+    const options = {
+      keys: ["title", "summary", "content"],
+      threshold: 0.4,
+    };
+
+    const fuse = new Fuse(pages, options);
+
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+
+    // Read query parameter (?q=something)
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get("q");
+
+    if (initialQuery) {
+      input.value = initialQuery;
+      runSearch(initialQuery);
+    }
+
+    input.addEventListener("input", () => {
+      runSearch(input.value.trim());
+    });
+
+    function runSearch(query) {
+      if (query.length < 2) {
+        results.innerHTML = "";
+        return;
+      }
+
+      const searchResults = fuse.search(query);
+
+      results.innerHTML = searchResults
+        .map(r => `
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5><a href="${r.item.permalink}">${r.item.title}</a></h5>
+              <p>${r.item.summary}</p>
+            </div>
+          </div>
+        `)
+        .join("");
+    }
+  }
+
+  initSearch();
+</script>
+
+{{ end }}
