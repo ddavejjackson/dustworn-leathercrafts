@@ -14,8 +14,24 @@ h3,
 h4,
 h5,
 h6 {
-  color: #d4af37;
+  color: #b8860b;
   font-family: "Lora", sans-serif;
+}
+
+/* Make the hamburger (navbar-toggler-icon) gold */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgb(212,175,55)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* Style the button border */
+.navbar-toggler {
+  border-color: #d4af37 !important;
+}
+
+/* Darker gold on press */
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  border-color: #b8860b !important;
 }
 
 /* NAVBAR */
