@@ -1,0 +1,100 @@
+{{ define "main" }}
+<style>
+  /* Gold-on-black form styling */
+  .form-gold label {
+    color: #d4af37; /* gold */
+    font-weight: bold;
+  }
+
+  .form-gold input,
+  .form-gold textarea {
+    background-color: #000;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+  }
+
+  .form-gold input::placeholder,
+  .form-gold textarea::placeholder {
+    color: #b8992e;
+  }
+
+  .form-gold input:focus,
+  .form-gold textarea:focus {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: none;
+  }
+
+  .btn-gold {
+    color: #000 !important;
+    background-color: #d4af37;
+    border: 2px solid #d4af37;
+    font-weight: bold;
+  }
+
+  .btn-gold:hover {
+    background-color: #b8992e;
+    border-color: #b8992e;
+  }
+</style>
+
+<h1 class="text-center mb-4" style="color: #d4af37; font-style: italic">
+  Contact Us
+</h1>
+
+<form class="row g-3 form-gold" method="post" action="#">
+  <div class="col-md-6">
+    <label for="name" class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      placeholder="Your name"
+      required
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="your@email.com"
+      required
+    />
+  </div>
+
+  <div class="col-12">
+    <label for="subject" class="form-label">Subject</label>
+    <input
+      type="text"
+      class="form-control"
+      id="subject"
+      name="subject"
+      placeholder="What is this about?"
+      required
+    />
+  </div>
+
+  <div class="col-12">
+    <label for="message" class="form-label">Message</label>
+    <textarea
+      class="form-control"
+      id="message"
+      name="message"
+      rows="5"
+      placeholder="Write your message..."
+      required
+    ></textarea>
+  </div>
+
+  <div class="col-12 text-center">
+    <button type="submit" class="btn btn-gold px-4 py-2">Send Message</button>
+  </div>
+</form>
+
+{{ end }}

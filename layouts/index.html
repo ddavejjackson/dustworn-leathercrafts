@@ -23,17 +23,6 @@
           <p class="card-text">{{ .Site.Params.description }}</p>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Navigation</h5>
-          <ul class="list-unstyled mb-0">
-            {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
     </div>
   </aside>
 </div>
